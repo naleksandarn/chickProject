@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chicken Weight App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Chicken Weight App">
+  <meta name="author" content="Aleksandar Nedeljkovic">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Chicken Weight App</h1>
+    <h2>Developing Data Products</h2>
+    <p>Aleksandar Nedeljkovic<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Application is made for visualizing and summarizing <code>chickwts</code> 
+dataset.</p>
+
+<p>Click <a href="http://aleksandarn.shinyapps.io/chickApp/">here</a> to go to app.</p>
+
+<p>Tab named <b>Plot</b> shows boxplot of chicken weights by feed type where different feed types can be selected from checkbox on the left side.</p>
+
+<p>Tab <b>Summary</b> presents summary statistics of chicken weights by feed type. Here again one can use checkbox on the left side to choose from feed type variable.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>chickwts data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This dataset comes from an experiment were <i>"the effectiveness of various feed supplements on the growth rate of chickens was measured and compared"</i> (from R Documentation). Dataset has two variables: <code>weight</code> - a numeric variable giving the chick weight and <code>feed</code> - a factor giving the feed type.</p>
+
+<figure>
+  <img src="assets/img/normal_Funny_chickens.jpg" alt="Chickens">
+  <figcaption><small>From: http://photos.congland.com/albums/uploads/fun/normal_Funny_chickens.jpg</small></figcaption>
+</figure>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Boxplot</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">boxplot(chickwts$weight ~ chickwts$feed)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>## $casein
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     216     277     342     324     371     404 
+## 
+## $sunflower
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     226     313     328     329     340     423
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='chickwts data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Boxplot'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
